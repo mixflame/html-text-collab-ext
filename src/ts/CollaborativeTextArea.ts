@@ -96,6 +96,17 @@ export class CollaborativeTextArea {
   public setText(value: string): void {
     this._inputManager.setText(value);
   }
+  
+  public setTextOnInsertWithSelections(index: number, value: string): void {
+    this._inputManager.setTextOnInsertWithSelections(index, value);
+    this._selectionManager.updateSelectionsOnInsert(index, value);
+  }
+  
+  public setTextOnDeleteWithSelections(index: number, length: number): void {
+    this._inputManager.setTextOnDeleteWithSelections(index, length);
+    this._selectionManager.updateSelectionsOnDelete(index, length);
+  }
+
 
   /**
    * Gets the current text of the textarea.
