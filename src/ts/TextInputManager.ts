@@ -73,6 +73,26 @@ export class TextInputManager {
     this._updateControl();
     this._setTextSelection(0, 0);
   }
+  
+  setTextOnInsertWithSelection(index: number, value: string): void {
+    this._assertBound();
+    const {start, end} = this._getSelection();
+    const xStart = IndexUtils.transformIndexOnInsert(start, index, value);
+    const xEnd = IndexUtils.transformIndexOnInsert(end, index, value);
+    this._changeDetector.setValue(value);
+    this._updateControl();
+    this._setTextSelection(xStart, xEnd);
+  }
+  
+  setTextOnDeleteWithSelection(index: number, length: number): void {
+    this._assertBound();
+    const {start, end} = this._getSelection();
+    const xStart = IndexUtils.transformIndexOnDelete(start, index, length);
+    const xEnd = IndexUtils.transformIndexOnDelete(end, index, length);
+    this._changeDetector.setValue(value);
+    this._updateControl();
+    this._setTextSelection(xStart, xEnd);
+  }
 
   getText(): string {
     return this._control.value;
