@@ -9,15 +9,11 @@
     "html"
   ],
   "homepage": "http://convergencelabs.com",
-  "author": {
-    "name": "Convergence Labs, Inc.",
-    "email": "info@convergencelabs.com",
-    "url": "http://convergencelabs.com"
-  },
+  "author": "Convergence Labs, Inc. <info@convergencelabs.com> (http://convergencelabs.com)",
   "contributors": [],
   "repository": {
     "type": "git",
-    "url": "https://github.com/convergencelabs/html-text-collab-ext.git"
+    "url": "git+https://github.com/convergencelabs/html-text-collab-ext.git"
   },
   "bugs": {
     "url": "https://github.com/convergencelabs/html-text-collab-ext/issues"
@@ -37,7 +33,7 @@
   "license": "MIT",
   "dependencies": {
     "@convergence/string-change-detector": "0.1.8",
-    "textarea-caret": "convergencelabs/textarea-caret-position"
+    "textarea-caret": "github:convergencelabs/textarea-caret-position"
   },
   "devDependencies": {
     "@babel/cli": "7.8.4",
@@ -72,5 +68,8 @@
     "trim": "0.0.1",
     "tslib": "^2.0.0",
     "typescript": "3.9.2"
+  },
+  "directories": {
+    "example": "example"
   }
 }
