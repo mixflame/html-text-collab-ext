@@ -74,7 +74,7 @@ export class TextInputManager {
     this._setTextSelection(0, 0);
   }
   
-  setTextOnInsertWithSelection(text: string, index: number, value: string): void {
+  setTextOnInsertWithSelections(text: string, index: number, value: string): void {
     this._assertBound();
     const {start, end} = this._getSelection();
     const xStart = IndexUtils.transformIndexOnInsert(start, index, value);
@@ -84,7 +84,7 @@ export class TextInputManager {
     this._setTextSelection(xStart, xEnd);
   }
   
-  setTextOnDeleteWithSelection(text: string, index: number, length: number): void {
+  setTextOnDeleteWithSelections(text: string, index: number, length: number): void {
     this._assertBound();
     const {start, end} = this._getSelection();
     const xStart = IndexUtils.transformIndexOnDelete(start, index, length);
