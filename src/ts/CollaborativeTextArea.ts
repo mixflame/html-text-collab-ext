@@ -97,13 +97,13 @@ export class CollaborativeTextArea {
     this._inputManager.setText(value);
   }
   
-  public setTextOnInsertWithSelections(index: number, value: string): void {
-    this._inputManager.setTextOnInsertWithSelections(index, value);
+  public setTextOnInsertWithSelections(text: string, index: number, value: string): void {
+    this._inputManager.setTextOnInsertWithSelections(text, index, value);
     this._selectionManager.updateSelectionsOnInsert(index, value);
   }
   
-  public setTextOnDeleteWithSelections(index: number, length: number): void {
-    this._inputManager.setTextOnDeleteWithSelections(index, length);
+  public setTextOnDeleteWithSelections(text: string, index: number, length: number): void {
+    this._inputManager.setTextOnDeleteWithSelections(text, index, length);
     this._selectionManager.updateSelectionsOnDelete(index, length);
   }
 
