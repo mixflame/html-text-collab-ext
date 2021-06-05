@@ -1,6 +1,6 @@
 {
   "name": "@convergence/html-text-collab-ext",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Collaborative extension for HTML TextAreas",
   "keywords": [
     "collaboration",
